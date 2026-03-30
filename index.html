@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── SEO ─── -->
+  <title>Đào Minh Chiến — Backend Java Developer</title>
+  <meta name="description" content="Portfolio của Đào Minh Chiến — Backend Java Developer chuyên Spring Boot, REST API, JWT, Docker. Sẵn sàng thực tập tại Hà Nội, Việt Nam." />
+  <meta name="keywords" content="Backend Java Developer, Spring Boot, REST API, JWT, Docker, Intern Java Hanoi, Đào Minh Chiến, chienne1" />
+  <meta name="author" content="Đào Minh Chiến" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chiendao.dev" />
+
+  <!-- ─── Open Graph ─── -->
+  <meta property="og:title" content="Đào Minh Chiến — Backend Java Developer" />
+  <meta property="og:description" content="3rd-year IT student building production-quality REST APIs with Java, Spring Boot, and Docker. Open to Backend Java Internship in Hanoi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chiendao.dev" />
+
+  <!-- ─── Fonts ─── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ─── Icons ─── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ─── Styles ─── -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ─── Favicon placeholder (replace with your own) ─── -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+</head>
+<body>
+
+  <!-- ─── CUSTOM CURSOR ─── -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ─── BG CANVAS ─── -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ─── MOBILE NAV ─── -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       NAV
+       ════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">ChienDev<span>.java</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="mailto:chiendao278@gmail.com" class="nav-cta">Hire Me</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ════════════════════════════════════════════
+       MAIN
+       ════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section id="home">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left -->
+          <div class="hero-left">
+            <div class="hero-badge">
+              <span class="dot"></span>
+              Available for Internship · Hanoi, Vietnam
+            </div>
+
+            <h1 class="hero-name">
+              Đào Minh<br><span class="accent">Chiến</span>
+            </h1>
+
+            <p class="hero-role">
+              &gt;&nbsp;<span class="typed-text" id="typed"></span><span class="typed-cursor">_</span>
+            </p>
+
+            <p class="hero-desc">
+              3rd-year IT student at Hanoi Open University building
+              <strong>production-quality REST APIs</strong> with
+              Java &amp; Spring Boot — JWT auth, N+1 optimization,
+              Docker containerization, and BDD unit tests.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <i class="fas fa-folder-open"></i> View Projects
+              </a>
+              <a href="#contact" class="btn-ghost">
+                <i class="fas fa-paper-plane"></i> Contact Me
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/chienne1" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/chiến-đào-79b7622b9" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:chiendao278@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="tel:+84879559213" aria-label="Phone">
+                <i class="fas fa-phone"></i>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <span class="stat-num">60+</span>
+                <span class="stat-lbl">REST Endpoints</span>
+              </div>
+              <div>
+                <span class="stat-num">11</span>
+                <span class="stat-lbl">Controllers</span>
+              </div>
+              <div>
+                <span class="stat-num">10+</span>
+                <span class="stat-lbl">Students Tutored</span>
+              </div>
+            </div>
+          </div><!-- /hero-left -->
+
+          <!-- Right visual -->
+          <div class="hero-visual">
+            <div class="ring ring-2"></div>
+            <div class="ring ring-1"></div>
+            <canvas id="hero-canvas"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /home -->
+
+
+    <!-- ─── ABOUT ─── -->
+    <section id="about">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">// who am i</p>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid reveal reveal-d1">
+          <div class="about-text">
+            <p>
+              I'm a <strong>3rd-year Information Technology student</strong> at Hanoi Open University,
+              expected to graduate in June 2027. My focus is backend engineering — not just
+              following coursework, but independently designing real systems.
+            </p>
+            <p>
+              I build with <strong>Java 21 &amp; Spring Boot 3</strong> as my primary stack,
+              with additional experience in <strong>C# and Python</strong>. I care deeply about
+              clean architecture, query performance, and security — JWT token rotation,
+              Optimistic Locking for concurrent access, and fixing N+1 problems before they hit production.
+            </p>
+            <p>
+              Beyond code, I've tutored 10+ students in Data Structures &amp; Algorithms,
+              which sharpened my ability to explain complex systems clearly — a skill that matters
+              in any engineering team.
+            </p>
+
+            <div class="about-info-list">
+              <div class="about-info-item">
+                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                Hanoi, Vietnam
+              </div>
+              <div class="about-info-item">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <a href="mailto:chiendao278@gmail.com">chiendao278@gmail.com</a>
+              </div>
+              <div class="about-info-item">
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <a href="https://github.com/chienne1" target="_blank" rel="noopener">github.com/chienne1</a>
+              </div>
+              <div class="about-info-item">
+                <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                Hanoi Open University · IT · 2024–2027
+              </div>
+            </div>
+          </div><!-- /about-text -->
+
+          <div class="about-right">
+            <div class="edu-card">
+              <div class="tag">// Education</div>
+              <h4>Hanoi Open University</h4>
+              <p>B.Sc. Information Technology · Expected Jun 2027</p>
+              <p style="margin-top:0.6rem; font-size:0.75rem; color:var(--text-dimmer);">
+                DSA · OOP · Database Systems · Software Engineering · Computer Networks
+              </p>
+            </div>
+
+            <div class="about-quote">
+              "My goal is to join a professional engineering team where I can contribute to a real codebase,
+              grow as a backend engineer, and build scalable, maintainable systems."
+            </div>
+
+            <div class="edu-card" style="border-left-color: var(--accent2);">
+              <div class="tag" style="color:var(--accent2)">// Languages</div>
+              <h4 style="font-size:0.9rem; color:var(--text-dim); font-weight:400; margin-top:0.3rem;">
+                🇻🇳 Vietnamese (Native) &nbsp;·&nbsp; 🇬🇧 English (Conversational, Technical Docs)
+              </h4>
+            </div>
+          </div><!-- /about-right -->
+        </div><!-- /about-grid -->
+      </div>
+    </section><!-- /about -->
+
+
+    <!-- ─── SKILLS ─── -->
+    <section id="skills">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">// what i use</p>
+          <h2 class="section-title">Tech Stack</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid reveal reveal-d1">
+
+          <div class="skill-category">
+            <div class="skill-cat-icon"><i class="fab fa-java"></i></div>
+            <div class="skill-cat-title">Core Stack</div>
+            <div class="skill-tags">
+              <span class="skill-tag primary">Java 21</span>
+              <span class="skill-tag primary">Spring Boot 3</span>
+              <span class="skill-tag primary">Spring Security</span>
+              <span class="skill-tag primary">Spring Data JPA</span>
+              <span class="skill-tag">Hibernate</span>
+              <span class="skill-tag">Maven</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="skill-cat-title">Auth &amp; API</div>
+            <div class="skill-tags">
+              <span class="skill-tag primary">JWT (HS512)</span>
+              <span class="skill-tag primary">RESTful API</span>
+              <span class="skill-tag primary">BCrypt</span>
+              <span class="skill-tag">RBAC</span>
+              <span class="skill-tag">Swagger / OpenAPI 3</span>
+              <span class="skill-tag">Multi-device Auth</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+            <div class="skill-cat-title">Database</div>
+            <div class="skill-tags">
+              <span class="skill-tag primary">MySQL 8</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">HikariCP</span>
+              <span class="skill-tag">Optimistic Locking</span>
+              <span class="skill-tag">JPQL / GROUP BY</span>
+              <span class="skill-tag">N+1 Optimization</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-icon"><i class="fab fa-docker"></i></div>
+            <div class="skill-cat-title">DevOps &amp; Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag primary">Docker</span>
+              <span class="skill-tag primary">Docker Compose</span>
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">IntelliJ IDEA</span>
+              <span class="skill-tag">Spring Actuator</span>
+              <span class="skill-tag">Multi-stage Build</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-icon"><i class="fas fa-vial"></i></div>
+            <div class="skill-cat-title">Testing</div>
+            <div class="skill-tags">
+              <span class="skill-tag primary">JUnit 5</span>
+              <span class="skill-tag primary">Mockito</span>
+              <span class="skill-tag">BDD Style</span>
+              <span class="skill-tag">Unit Testing</span>
+              <span class="skill-tag">7+ Scenarios</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <div class="skill-cat-title">Other Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag primary">C#</span>
+              <span class="skill-tag primary">Python</span>
+              <span class="skill-tag">Lombok</span>
+              <span class="skill-tag">JavaMail (@Async)</span>
+              <span class="skill-tag">Thymeleaf</span>
+              <span class="skill-tag">Cron Jobs</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /skills -->
+
+
+    <!-- ─── PROJECTS ─── -->
+    <section id="projects">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">// what i've built</p>
+          <h2 class="section-title">Projects</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid reveal reveal-d1">
+
+          <!-- Featured -->
+          <div class="project-card featured">
+            <div>
+              <div class="project-label">★ Featured · Dec 2025 – Present</div>
+              <h3 class="project-title">Library Management System — Backend API</h3>
+              <p class="project-desc">
+                Production-grade REST API for a full library management platform.
+                Architected from scratch with security, performance, automation, and testing
+                as first-class concerns — not afterthoughts.
+              </p>
+              <div class="project-highlights">
+                <div class="project-highlight-item">Architected 9-entity domain model with soft-delete, audit timestamps, and @Version Optimistic Locking to prevent concurrent-borrow race conditions.</div>
+                <div class="project-highlight-item">JWT dual-token auth (24h access + 7d refresh) with revocation, multi-device logout, and token-theft detection — securing 60+ endpoints across 11 controllers.</div>
+                <div class="project-highlight-item">Fixed N+1 query: 2 batch JPQL GROUP BY queries replaced 2N per-book calls, reducing query count from 2N+1 to a constant 3 per page.</div>
+                <div class="project-highlight-item">Automated 5 cron jobs (overdue alerts, reminders, expiry, cleanup, daily report) + async email via 6 Thymeleaf templates.</div>
+              </div>
+            </div>
+            <div>
+              <div class="project-stack" style="margin-bottom:1.5rem;">
+                <span class="stack-tag">Java 21</span>
+                <span class="stack-tag">Spring Boot 3.4</span>
+                <span class="stack-tag">Spring Security</span>
+                <span class="stack-tag">MySQL 8</span>
+                <span class="stack-tag">JWT</span>
+                <span class="stack-tag">Docker Compose</span>
+                <span class="stack-tag">JUnit 5</span>
+                <span class="stack-tag">Mockito</span>
+              </div>
+              <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+                <a href="https://github.com/chienne1/library-management" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.72rem; padding:0.7rem 1.4rem;">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div><!-- /featured -->
+
+          <!-- C# Placeholder -->
+          <div class="project-card placeholder">
+            <div class="placeholder-plus">+</div>
+            <p>
+              <strong style="color:var(--text-dim); display:block; margin-bottom:0.3rem;">C# / .NET Project</strong>
+              Coming soon · ASP.NET Core or .NET MAUI project
+            </p>
+          </div>
+
+          <!-- Python Placeholder -->
+          <div class="project-card placeholder">
+            <div class="placeholder-plus" style="border-color:rgba(0,102,255,0.3); color:var(--accent2);">+</div>
+            <p>
+              <strong style="color:var(--text-dim); display:block; margin-bottom:0.3rem;">Python Project</strong>
+              Coming soon · FastAPI / Django / script project
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /projects -->
+
+
+    <!-- ─── EXPERIENCE ─── -->
+    <section id="experience">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">// my journey</p>
+          <h2 class="section-title">Experience</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="exp-timeline reveal reveal-d1">
+
+          <div class="exp-item">
+            <div class="exp-date">Jun 2024 – Nov 2025</div>
+            <div class="exp-role">DSA Tutor</div>
+            <div class="exp-company">Self-employed · Freelance</div>
+            <ul class="exp-bullets">
+              <li>Tutored 10+ students in Data Structures &amp; Algorithms using Java, covering arrays, trees, graphs, sorting, and dynamic programming.</li>
+              <li>Designed custom problem sets and conducted code reviews — students successfully passed university exams and cleared internship technical screens.</li>
+              <li>Developed strong skills in explaining complex technical concepts clearly and structured thinking under deadline pressure.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item" style="opacity:0.5;">
+            <div class="exp-date">2025–2026 · Upcoming</div>
+            <div class="exp-role">Backend Java Intern</div>
+            <div class="exp-company">Your Company · Open to Opportunities</div>
+            <ul class="exp-bullets">
+              <li>Actively seeking a Backend Java Internship where I can contribute to a real engineering team and grow toward senior backend engineering.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /experience -->
+
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">// let's talk</p>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid reveal reveal-d1">
+
+          <!-- Left info -->
+          <div class="contact-left">
+            <p>
+              I'm currently open to <strong>Backend Java Internship</strong> opportunities in Hanoi
+              (on-site or hybrid). If you're looking for a motivated developer who ships real systems,
+              writes clean code, and learns fast — let's talk.
+            </p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                <div class="ci-text">
+                  <div style="font-size:0.62rem; color:var(--text-dimmer); margin-bottom:0.2rem; letter-spacing:0.1em; text-transform:uppercase;">Email</div>
+                  <a href="mailto:chiendao278@gmail.com">chiendao278@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                <div class="ci-text">
+                  <div style="font-size:0.62rem; color:var(--text-dimmer); margin-bottom:0.2rem; letter-spacing:0.1em; text-transform:uppercase;">Phone</div>
+                  <a href="tel:+84879559213">+84 879 559 213</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fab fa-github"></i></div>
+                <div class="ci-text">
+                  <div style="font-size:0.62rem; color:var(--text-dimmer); margin-bottom:0.2rem; letter-spacing:0.1em; text-transform:uppercase;">GitHub</div>
+                  <a href="https://github.com/chienne1" target="_blank" rel="noopener">github.com/chienne1</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="ci-text">
+                  <div style="font-size:0.62rem; color:var(--text-dimmer); margin-bottom:0.2rem; letter-spacing:0.1em; text-transform:uppercase;">LinkedIn</div>
+                  <a href="https://linkedin.com/in/chiến-đào-79b7622b9" target="_blank" rel="noopener">linkedin.com/in/chiến-đào</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="ci-text">
+                  <div style="font-size:0.62rem; color:var(--text-dimmer); margin-bottom:0.2rem; letter-spacing:0.1em; text-transform:uppercase;">Location</div>
+                  <span style="color:var(--text)">Hanoi, Vietnam · On-site / Hybrid</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- /contact-left -->
+
+          <!-- Right form -->
+          <div class="contact-form-box">
+            <p class="section-label" style="margin-bottom:1.2rem;">// send a message</p>
+
+            <div class="form-group">
+              <label for="cf-name">Your Name</label>
+              <input type="text" id="cf-name" placeholder="Nguyen Van A" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" placeholder="hr@company.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="cf-company">Company (optional)</label>
+              <input type="text" id="cf-company" placeholder="FPT Software / NashTech..." />
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <select id="cf-subject">
+                <option value="">Select a topic</option>
+                <option value="Backend Java Internship Offer">Backend Java Internship Offer</option>
+                <option value="Freelance / Project Collaboration">Freelance / Project Collaboration</option>
+                <option value="DSA Tutoring">DSA Tutoring</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" placeholder="Hi Chiến, I'd like to discuss an internship opportunity at..."></textarea>
+            </div>
+
+            <button class="btn-primary" id="submit-btn" style="width:100%; justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-note">
+              Will open your mail client · Or email directly:
+              <a href="mailto:chiendao278@gmail.com">chiendao278@gmail.com</a>
+            </p>
+          </div><!-- /contact-form-box -->
+
+        </div>
+      </div>
+    </section><!-- /contact -->
+
+  </main>
+
+
+  <!-- ════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════ -->
+  <footer>
+    <p>
+      Designed &amp; built by <a href="#home">Đào Minh Chiến</a> · 2025 ·
+      <a href="https://github.com/chienne1" target="_blank" rel="noopener">github.com/chienne1</a>
+    </p>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="top-btn" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ─── Three.js ─── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- ─── Main script ─── -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
