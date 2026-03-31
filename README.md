@@ -5,7 +5,7 @@ Portfolio website introducing my profile, technical strengths, and real projects
 ## Live Portfolio
 
 - Main URL: https://chiendao.dev
-- Fallback URL: https://portfolio-9pihvjtqt-chiennee1s-projects.vercel.app
+- Fallback URL: https://portfolio-eta-mocha-58.vercel.app/
 
 ## Recruiter Snapshot
 
