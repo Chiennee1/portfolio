@@ -1,9 +1,4 @@
-/* ══════════════════════════════════════════════
-   Đào Minh Chiến — Portfolio
-   css/style.css
-   ══════════════════════════════════════════════ */
 
-/* ─── DESIGN TOKENS ─── */
 :root {
   --bg:          #050810;
   --bg2:         #080d1a;
@@ -24,7 +19,6 @@
   --transition:  0.25s cubic-bezier(.4,0,.2,1);
 }
 
-/* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -38,7 +32,6 @@ img, canvas { display: block; }
 a { cursor: none; }
 button { cursor: none; }
 
-/* ─── CUSTOM CURSOR ─── */
 .cursor {
   width: 10px; height: 10px;
   background: var(--accent);
@@ -61,18 +54,15 @@ button { cursor: none; }
 .cursor.hover  { width: 18px; height: 18px; }
 .cursor.click  { transform: translate(-50%,-50%) scale(0.7); }
 
-/* ─── CANVAS BG ─── */
 #bg-canvas {
   position: fixed; inset: 0;
   width: 100%; height: 100%;
   z-index: 0; pointer-events: none;
 }
 
-/* ─── LAYOUT ─── */
 section { position: relative; z-index: 1; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-/* ─── SECTION LABELS ─── */
 .section-label {
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -94,7 +84,6 @@ section { position: relative; z-index: 1; }
   margin-bottom: 3rem;
 }
 
-/* ─── REVEAL ANIMATIONS ─── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -105,7 +94,6 @@ section { position: relative; z-index: 1; }
 .reveal-d2 { transition-delay: 0.2s; }
 .reveal-d3 { transition-delay: 0.3s; }
 
-/* ─── BUTTONS ─── */
 .btn-primary {
   font-family: var(--mono);
   font-size: 0.75rem;
@@ -148,9 +136,6 @@ section { position: relative; z-index: 1; }
   transform: translateY(-2px);
 }
 
-/* ══════════════════════════════════════════════
-   NAV
-   ══════════════════════════════════════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
@@ -222,7 +207,6 @@ nav.scrolled {
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ─── MOBILE NAV ─── */
 .mobile-nav {
   display: none;
   position: fixed; inset: 0;
@@ -244,9 +228,6 @@ nav.scrolled {
 }
 .mobile-nav a:hover { color: var(--accent); }
 
-/* ══════════════════════════════════════════════
-   HERO
-   ══════════════════════════════════════════════ */
 #home {
   min-height: 100vh;
   display: flex; align-items: center;
@@ -393,9 +374,6 @@ nav.scrolled {
   to   { opacity: 1; transform: none; }
 }
 
-/* ══════════════════════════════════════════════
-   ABOUT
-   ══════════════════════════════════════════════ */
 #about { padding: 6rem 0; }
 .about-grid {
   display: grid;
@@ -466,9 +444,6 @@ nav.scrolled {
   line-height: 1.75;
 }
 
-/* ══════════════════════════════════════════════
-   SKILLS
-   ══════════════════════════════════════════════ */
 #skills { padding: 6rem 0; background: var(--bg2); }
 .skills-grid {
   display: grid;
@@ -527,9 +502,6 @@ nav.scrolled {
   background: rgba(0,245,196,0.06);
 }
 
-/* ══════════════════════════════════════════════
-   PROJECTS
-   ══════════════════════════════════════════════ */
 #projects { padding: 6rem 0; }
 .projects-grid {
   display: grid;
@@ -652,9 +624,6 @@ nav.scrolled {
 }
 .project-card.placeholder:hover p { color: var(--text-dim); }
 
-/* ══════════════════════════════════════════════
-   EXPERIENCE
-   ══════════════════════════════════════════════ */
 #experience { padding: 6rem 0; background: var(--bg2); }
 .exp-timeline { position: relative; padding-left: 2rem; }
 .exp-timeline::before {
@@ -696,9 +665,6 @@ nav.scrolled {
   color: var(--accent);
 }
 
-/* ══════════════════════════════════════════════
-   CONTACT
-   ══════════════════════════════════════════════ */
 #contact { padding: 6rem 0; }
 .contact-grid {
   display: grid;
@@ -780,9 +746,6 @@ nav.scrolled {
 }
 .form-note a { color: var(--accent); text-decoration: none; }
 
-/* ══════════════════════════════════════════════
-   FOOTER
-   ══════════════════════════════════════════════ */
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem;
@@ -810,9 +773,6 @@ footer a:hover { text-decoration: underline; }
 #top-btn.show { opacity: 1; pointer-events: auto; }
 #top-btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
-/* ══════════════════════════════════════════════
-   RESPONSIVE
-   ══════════════════════════════════════════════ */
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
   nav.scrolled { padding: 0.7rem 1.5rem; }

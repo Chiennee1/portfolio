@@ -1,16 +1,8 @@
-/* ══════════════════════════════════════════════
-   Đào Minh Chiến — Portfolio
-   js/main.js
-   ══════════════════════════════════════════════ */
-
 'use strict';
 
-/* ─────────────────────────────────────────────
-   CUSTOM CURSOR
-   ───────────────────────────────────────────── */
 (function initCursor() {
   const cursor = document.getElementById('cursor');
-  const ring   = document.getElementById('cursor-ring');
+  const ring = document.getElementById('cursor-ring');
   if (!cursor || !ring) return;
 
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -18,11 +10,11 @@
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursor.style.left = mx + 'px';
-    cursor.style.top  = my + 'px';
+    cursor.style.top = my + 'px';
   });
 
   document.addEventListener('mousedown', () => cursor.classList.add('click'));
-  document.addEventListener('mouseup',   () => cursor.classList.remove('click'));
+  document.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
   // Hover state on interactive elements
   document.querySelectorAll('a, button, .project-card, .skill-category, .skill-tag').forEach(el => {
@@ -35,17 +27,14 @@
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
     ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
+    ring.style.top = ry + 'px';
     requestAnimationFrame(animateRing);
   })();
 })();
 
 
-/* ─────────────────────────────────────────────
-   NAV — SCROLL SHRINK + ACTIVE LINK
-   ───────────────────────────────────────────── */
 (function initNav() {
-  const navbar   = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -69,9 +58,6 @@
 })();
 
 
-/* ─────────────────────────────────────────────
-   MOBILE NAV
-   ───────────────────────────────────────────── */
 (function initMobileNav() {
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
@@ -93,9 +79,6 @@
 })();
 
 
-/* ─────────────────────────────────────────────
-   TYPING EFFECT
-   ───────────────────────────────────────────── */
 (function initTyping() {
   const el = document.getElementById('typed');
   if (!el) return;
@@ -124,9 +107,6 @@
 })();
 
 
-/* ─────────────────────────────────────────────
-   SCROLL REVEAL
-   ───────────────────────────────────────────── */
 (function initReveal() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -141,9 +121,6 @@
 })();
 
 
-/* ─────────────────────────────────────────────
-   BACK TO TOP
-   ───────────────────────────────────────────── */
 (function initTopBtn() {
   const btn = document.getElementById('top-btn');
   if (!btn) return;
@@ -151,19 +128,16 @@
 })();
 
 
-/* ─────────────────────────────────────────────
-   CONTACT FORM
-   ───────────────────────────────────────────── */
 (function initContactForm() {
   const btn = document.getElementById('submit-btn');
   if (!btn) return;
 
   btn.addEventListener('click', () => {
-    const name    = document.getElementById('cf-name')?.value.trim()    || '';
-    const email   = document.getElementById('cf-email')?.value.trim()   || '';
+    const name = document.getElementById('cf-name')?.value.trim() || '';
+    const email = document.getElementById('cf-email')?.value.trim() || '';
     const company = document.getElementById('cf-company')?.value.trim() || '';
-    const subject = document.getElementById('cf-subject')?.value        || '';
-    const msg     = document.getElementById('cf-message')?.value.trim() || '';
+    const subject = document.getElementById('cf-subject')?.value || '';
+    const msg = document.getElementById('cf-message')?.value.trim() || '';
 
     if (!name || !email || !msg) {
       alert('Please fill in your name, email and message.');
@@ -183,9 +157,6 @@
 })();
 
 
-/* ─────────────────────────────────────────────
-   THREE.JS — PARTICLE BACKGROUND
-   ───────────────────────────────────────────── */
 (function initBgParticles() {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
@@ -194,18 +165,18 @@
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  const scene  = new THREE.Scene();
+  const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 5;
 
   // Points
   const count = 1800;
-  const geo   = new THREE.BufferGeometry();
-  const pos   = new Float32Array(count * 3);
+  const geo = new THREE.BufferGeometry();
+  const pos = new Float32Array(count * 3);
   for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * 20;
   geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
 
-  const mat    = new THREE.PointsMaterial({ size: 0.022, color: 0x00f5c4, transparent: true, opacity: 0.5, sizeAttenuation: true });
+  const mat = new THREE.PointsMaterial({ size: 0.022, color: 0x00f5c4, transparent: true, opacity: 0.5, sizeAttenuation: true });
   const points = new THREE.Points(geo, mat);
   scene.add(points);
 
@@ -221,7 +192,7 @@
 
   let mx = 0, my = 0;
   document.addEventListener('mousemove', e => {
-    mx = (e.clientX / window.innerWidth  - 0.5) * 0.4;
+    mx = (e.clientX / window.innerWidth - 0.5) * 0.4;
     my = (e.clientY / window.innerHeight - 0.5) * 0.4;
   });
 
@@ -237,49 +208,46 @@
     t += 0.0004;
     points.rotation.y += (mx - points.rotation.y) * 0.02 + 0.0003;
     points.rotation.x += (-my - points.rotation.x) * 0.02;
-    points.rotation.z  = Math.sin(t) * 0.05;
+    points.rotation.z = Math.sin(t) * 0.05;
     renderer.render(scene, camera);
   })();
 })();
 
 
-/* ─────────────────────────────────────────────
-   THREE.JS — HERO SPHERE
-   ───────────────────────────────────────────── */
 (function initHeroSphere() {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
 
   const SIZE = 400;
-  canvas.width  = SIZE;
+  canvas.width = SIZE;
   canvas.height = SIZE;
 
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(SIZE, SIZE);
 
-  const scene  = new THREE.Scene();
+  const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
   camera.position.z = 3.5;
 
   // Outer wireframe
-  const geoOuter  = new THREE.IcosahedronGeometry(1.4, 3);
-  const matOuter  = new THREE.MeshBasicMaterial({ color: 0x00f5c4, wireframe: true, transparent: true, opacity: 0.22 });
+  const geoOuter = new THREE.IcosahedronGeometry(1.4, 3);
+  const matOuter = new THREE.MeshBasicMaterial({ color: 0x00f5c4, wireframe: true, transparent: true, opacity: 0.22 });
   const wireOuter = new THREE.Mesh(geoOuter, matOuter);
   scene.add(wireOuter);
 
   // Inner wireframe
-  const geoInner  = new THREE.IcosahedronGeometry(1.0, 2);
-  const matInner  = new THREE.MeshBasicMaterial({ color: 0x0066ff, wireframe: true, transparent: true, opacity: 0.14 });
+  const geoInner = new THREE.IcosahedronGeometry(1.0, 2);
+  const matInner = new THREE.MeshBasicMaterial({ color: 0x0066ff, wireframe: true, transparent: true, opacity: 0.14 });
   scene.add(new THREE.Mesh(geoInner, matInner));
 
   // Surface dots
   const dotGeo = new THREE.BufferGeometry();
   const dotPos = [];
   for (let i = 0; i < 180; i++) {
-    const phi   = Math.acos(2 * Math.random() - 1);
+    const phi = Math.acos(2 * Math.random() - 1);
     const theta = Math.random() * Math.PI * 2;
-    const r     = 1.4;
+    const r = 1.4;
     dotPos.push(
       r * Math.sin(phi) * Math.cos(theta),
       r * Math.sin(phi) * Math.sin(theta),
@@ -292,7 +260,7 @@
 
   let mx = 0, my = 0;
   document.addEventListener('mousemove', e => {
-    mx = (e.clientX / window.innerWidth  - 0.5) * 0.6;
+    mx = (e.clientX / window.innerWidth - 0.5) * 0.6;
     my = (e.clientY / window.innerHeight - 0.5) * 0.6;
   });
 
@@ -302,7 +270,7 @@
     t += 0.004;
     wireOuter.rotation.y += (mx * 0.5 - wireOuter.rotation.y) * 0.04 + 0.003;
     wireOuter.rotation.x += (-my * 0.3 - wireOuter.rotation.x) * 0.04;
-    wireOuter.rotation.z  = Math.sin(t * 0.3) * 0.08;
+    wireOuter.rotation.z = Math.sin(t * 0.3) * 0.08;
     renderer.render(scene, camera);
   })();
 })();
