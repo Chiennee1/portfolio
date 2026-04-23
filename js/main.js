@@ -86,8 +86,8 @@
   const roles = [
     'Backend Java Developer',
     'Spring Boot Engineer',
-    'REST API Builder',
-    'DSA Tutor'
+    'E-Learning Platform Builder',
+    'REST API Builder'
   ];
 
   let ri = 0, ci = 0, deleting = false;
